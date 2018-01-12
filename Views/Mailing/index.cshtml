@@ -1,0 +1,27 @@
+﻿@model IEnumerable<AspAssignments.Models.Mailing>
+
+@{
+    ViewBag.Title = "index";
+}
+
+<h2>index</h2>
+
+<table class="table">
+
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.FirstName)</th>
+        <th>@Html.DisplayNameFor(model => model.LastName)</th>
+        <th>@Html.DisplayNameFor(model => model.Email)</th>
+    </tr>
+
+    @foreach(var item in Model)
+    {
+    <tr>
+        <td>@Html.DisplayFor(model => item.FirstName)</td>
+        <td>@Html.DisplayFor(model => item.LastName)</td>
+        <td>@Html.DisplayFor(model => item.Email)</td>
+    </tr>
+    }
+
+</table>
+
